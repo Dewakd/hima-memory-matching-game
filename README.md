@@ -1,53 +1,87 @@
-# React + TypeScript + Vite
+# 🧠 Memory Matching Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fun and challenging memory matching game built with React, TypeScript, and Vite. Test your memory skills by matching pairs of adorable animal emojis within a 2-minute time limit!
 
-Currently, two official plugins are available:
+## 🎮 Game Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **10 Unique Animal Pairs**: Match cute animal emojis including dogs, cats, foxes, bears, and more
+- **2-Minute Challenge**: Race against time with a countdown timer
+- **Visual Feedback**: Cards flip with smooth animations and color changes
+- **Game Statistics**: Track your moves, matches, and remaining time
+- **Win/Lose Conditions**: Celebrate victory or try again after time runs out
+- **Responsive Design**: Beautiful gradient UI that works on all devices
+- **Game Controls**: New Game and Reset buttons for easy gameplay management
 
-## Expanding the ESLint configuration
+## 🚀 How to Play
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. Click on any card to flip it and reveal the animal emoji
+2. Click on a second card to find its matching pair
+3. If the cards match, they stay flipped and turn green
+4. If they don't match, they flip back after a short delay
+5. Match all 10 pairs before the 2-minute timer runs out to win!
+6. Use the "New Game" button to start fresh or "Reset" to restart the current game
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Technology Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **React 18** - Modern React with hooks
+- **TypeScript** - Type-safe development
+- **Vite** - Fast build tool and development server
+- **Tailwind CSS** - Utility-first CSS framework
+- **ESLint** - Code linting and formatting
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📦 Installation & Setup
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd memory-matching-game
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Install dependencies:
+```bash
+npm install
+```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+3. Start the development server:
+```bash
+npm run dev
+```
 
-export default tseslint.config([
-  globalIgnores(['dist']),
+4. Open your browser and navigate to `http://localhost:5173`
+
+## 🎯 Game Rules
+
+- **Objective**: Match all 10 pairs of animal emojis
+- **Time Limit**: 2 minutes (120 seconds)
+- **Scoring**: Track your moves and try to complete with fewer moves
+- **Warning**: Timer turns red and pulses when 30 seconds or less remain
+- **Game Over**: If time runs out, a game over modal appears with your stats
+- **Victory**: Complete all matches to see your winning time and move count
+
+## 🔧 Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+
+## 🎨 Features Highlights
+
+- **Smooth Animations**: Cards flip with CSS transitions
+- **Visual States**: Different colors for flipped, matched, and unmatched cards
+- **Responsive Grid**: 5x4 grid layout that adapts to screen sizes
+- **Modern UI**: Clean design with shadows, gradients, and hover effects
+- **Accessibility**: Proper button states and keyboard navigation support
+
+## 🏆 Challenge Yourself
+
+Try to:
+- Complete the game in the fewest moves possible
+- Beat your previous time records
+- Challenge friends to see who can complete it faster
+- Play multiple rounds to improve your memory skills
+
+Enjoy the game and have fun testing your memory! 🎉
   {
     files: ['**/*.{ts,tsx}'],
     extends: [
